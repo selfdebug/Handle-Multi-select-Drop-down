@@ -1,0 +1,48 @@
+<form [formGroup]="submitForm" class="mainbody">
+<div>
+<h1  style="margin-left: 150px;font-size: 33px;height: 40px;margin-top: 20px;">Multi Select DropDown with Cascading</h1>
+<div class="row">
+<label for="countryId" style="font-weight: bold;">Country :</label>
+<mat-form-field class="ca80">
+<mat-select formControlName="countryId" name="countryId" multiple (selectionChange)="countryChange($event)">
+<mat-option *ngFor="let type of countriesList" [value]="type.id"> {{type.name}}</mat-option>
+</mat-select>
+</mat-form-field>
+</div>
+<div class="row">
+<label for="stateId" style="font-weight: bold;">State :</label>
+<mat-form-field class="ca80">
+<mat-select formControlName="stateId" name="stateId" multiple (selectionChange)="stateChange($event)">
+<mat-option *ngFor="let type of statesList" [value]="type.id"> {{type.name}}</mat-option>
+</mat-select>
+</mat-form-field>
+</div>
+<div class="row">
+<label for="cityId" style="font-weight: bold;">City :</label>
+<mat-form-field class="ca80">
+<mat-select formControlName="cityId" name="cityId" multiple (selectionChange)="cityChange($event)">
+<mat-option *ngFor="let type of citiesList" [value]="type.id"> {{type.name}}</mat-option>
+</mat-select>
+</mat-form-field>
+</div>
+<div class="row">
+<button type="button" class="btn" (click)="submit()">Submit</button>
+</div>
+</div>
+</form>
+<div style="width: 700px;">
+<table id="customers">
+<tr>
+<th>Country</th>
+<th>State</th>
+<th>City</th>
+<th>Action</th>
+</tr>
+<tr *ngFor="let item of submitFormList;let i=index">
+<td>{{item.countryName}}</td>
+<td>{{item.stateName}}</td>
+<td>{{item.cityName}}</td>
+<td><button (click)="modify(item, i)">Edit</button></td>
+</tr>
+</table>
+</div>

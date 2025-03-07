@@ -1,0 +1,12 @@
+
+{
+  "/api": {
+  "target": "https://www.nseindia.com/api/option-chain-indices?symbol=NIFTY",
+  "changeOrigin": true,
+  "secure": false,
+  "logLevel": "debug",
+  "pathRewrite": {
+    "^/api": ""
+  }
+}
+}

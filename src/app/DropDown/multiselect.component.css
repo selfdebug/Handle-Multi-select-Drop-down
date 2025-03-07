@@ -1,0 +1,58 @@
+.mainbody
+{
+border: 1px solid black;
+padding-left: 20px;
+width: 800px;
+background-color: rgb(187, 182, 182);
+margin-left: 200px;
+height: 400px;
+margin-top: 20px;
+}
+.mat-mdc-form-field
+{
+width: 500px;
+}
+.row {
+margin-right: -15px;
+margin-left: -15px;
+margin-top: 10px;
+}
+label {
+width:180px;
+clear:left;
+text-align:right;
+padding-right:10px;
+}
+input, label {
+float:left;
+}
+#customers {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+width: 100%;
+margin-left: 250px;
+margin-top:50px;
+}
+#customers td, #customers th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:hover {background-color: #ddd;}
+#customers th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #04AA6D;
+color: white;
+}
+.btn
+{
+position: static;
+background-color: #ea540f;
+color: white;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+margin-left: 300px;
+}
