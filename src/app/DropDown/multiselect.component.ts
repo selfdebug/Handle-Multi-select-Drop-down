@@ -97,7 +97,11 @@ this.index = -1;
 }
 }
 modify(item: any, index: any) {
+this.getCountries();
+this.getStates();
+this.getCities();
 this.submitForm.patchValue(item);
+this.countryChange(this.submitForm.controls["countryId"])
 this.index = index;
 }
 updateStateFormControle() {
